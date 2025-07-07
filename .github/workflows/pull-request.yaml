@@ -1,0 +1,19 @@
+name: Pull Request
+
+on:
+  push:
+    branches: ["develop", "master"]
+  pull-request:
+    branches: ["develop", "master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: build
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
+    - run: |
+        npm ci
+        npm run test
