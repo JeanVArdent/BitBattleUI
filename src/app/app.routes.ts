@@ -5,6 +5,7 @@ import { DocsComponent } from './docs/docs.component';
 import { CompetitorsComponent } from './admin/competitors/competitors.component';
 import { AuthGuard } from './auth-guard/auth.guard';
 import { StreamManagementComponent } from './admin/stream-management/stream-management.component';
+import { AccessDeniedComponent } from './access-denied/access-denied.component';
 
 export const routes: Routes = [
   {
@@ -33,6 +34,11 @@ export const routes: Routes = [
     component: StreamManagementComponent,
     pathMatch: 'full',
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'access-denied',
+    component: AccessDeniedComponent,
+    pathMatch: 'full'
   },
   {
     path: '',
