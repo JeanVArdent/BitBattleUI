@@ -6,6 +6,9 @@ import { CompetitorsComponent } from './admin/competitors/competitors.component'
 import { AuthGuard } from './auth-guard/auth.guard';
 import { StreamManagementComponent } from './admin/stream-management/stream-management.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
+import { SubmissionComponent } from './submission/submission.component';
+import { VisualizationComponent } from './visualization/visualization.component';
+import { TestingComponent } from './testing/testing.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +25,24 @@ export const routes: Routes = [
     path: 'docs',
     component: DocsComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'submission',
+    component: SubmissionComponent,
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'visualizer',
+    component: VisualizationComponent,
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'test',
+    component: TestingComponent,
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
   },
   {
     path: 'admin/competitors',
