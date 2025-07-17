@@ -40,7 +40,15 @@ module.exports = function (config) {
         { type: 'html' },
         { type: 'text' },
         { type: 'text-summary' }
-      ]
+      ],
+      check: {
+        global: {
+          statements: 90,
+          branches: 90,
+          functions: 90,
+          lines: 90
+        }
+      }
     },
     reporters: ['progress', 'kjhtml'],
     browsers: ['ChromeHeadless']
