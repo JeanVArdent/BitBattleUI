@@ -24,4 +24,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: code-coverage-report
-        path: output/test/code-coverage.html
+        path: coverage/bit-battle-ui/index.html
