@@ -19,4 +19,4 @@ jobs:
     - name: Run Tests
       run: |
         npm ci
-        ng test --watch=false
+        npm run test:noWatch
