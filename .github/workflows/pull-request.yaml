@@ -19,4 +19,4 @@ jobs:
     - name: Run Tests
       run: |
         npm ci
-        npm run test
+        ng test --watch=false
